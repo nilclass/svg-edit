@@ -3955,6 +3955,9 @@
 
 								$.each(keyval.split('/'), function(i, key) {
 									$(document).bind('keydown', key, function(e) {
+                    if(e.target.tagName === 'INPUT') {
+                      return true;
+                    }
 										fn();
 										if (pd) {
 											e.preventDefault();
