@@ -1462,3 +1462,25 @@ ul li.current {
 .contextMenu LI.delete A { background-image: url(images/page_white_delete.png); }
 .contextMenu LI.quit A { background-image: url(images/door.png); }
 */
+
+#remotestorage_open_dialog .inner {
+	position: absolute;
+	top: 50px;
+	padding: 10px;
+	background-color: #B0B0B0;
+	border: 1px outset #777;
+	opacity: 1.0;
+/*	width: 450px;*/
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .8em;
+	z-index: 20001;
+}
+
+#remotestorage_open_dialog .inner .file-list {
+    background: white;
+    clear: both;
+}
+
+#remotestorage_open_dialog .inner .file-list li {
+    cursor: pointer;
+}
