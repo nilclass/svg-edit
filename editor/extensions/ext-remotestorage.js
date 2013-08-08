@@ -11,7 +11,7 @@ svgEditor.addExtension("remotestorage", {
 
   callback: function() {
 
-    remoteStorage.claimAccess('pictures', 'rw');
+    remoteStorage.access.claim('pictures', 'rw');
     remoteStorage.displayWidget();
 
     var album = remoteStorage.pictures.openPublicAlbum('svg-edit');

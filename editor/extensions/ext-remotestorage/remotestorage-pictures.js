@@ -6,9 +6,18 @@
 // unless it starts with a dollar sign ($)
 //
 
-remoteStorage.defineModule('pictures', function(privateClient, publicClient) {
+RemoteStorage.defineModule('pictures', function(privateClient, publicClient) {
 
-  var isDir = remoteStorage.util.isDir;
+  function isDir(path) {
+    return path[path.length - 1] == '/';
+  }
+  function bindAll(object) {
+    for(var key in this) {
+      if(typeof(object[key]) == 'function') {
+        object[key] = object[key].bind(object);
+      }
+    }
+  }
 
   // Albums only work, when the user is connected and online.
   var Album = function(name, client) {
